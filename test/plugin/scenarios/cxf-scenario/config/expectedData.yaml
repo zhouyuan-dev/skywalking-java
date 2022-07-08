@@ -69,6 +69,7 @@ segmentItems:
             skipAnalysis: false
             tags:
               - {key: http.method, value: POST}
+              - {key: http.status_code, value: '200'}
               - {key: url, value: 'http://localhost:8080/cxf-scenario/soap/user/getUser'}
           - operationName: GET:/cxf-scenario/case/cxf-scenario
             parentSpanId: -1
@@ -84,3 +85,4 @@ segmentItems:
             tags:
               - {key: url, value: 'http://localhost:8080/cxf-scenario/case/cxf-scenario'}
               - {key: http.method, value: GET}
+              - {key: http.status_code, value: '200'}

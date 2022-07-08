@@ -32,6 +32,7 @@ segmentItems:
       tags:
       - {key: url, value: 'http://localhost:18080/jettyserver-case/case/receiveContext-0'}
       - {key: http.method, value: GET}
+      - {key: http.status_code, value: '200'}
       refs:
       - {parentEndpoint: GET:/jettyclient-case/case/jettyclient-case, networkAddress: 'localhost:18080',
         refType: CrossProcess, parentSpanId: 1, parentTraceSegmentId: not null, parentServiceInstance: not
@@ -54,6 +55,7 @@ segmentItems:
       peer: localhost:18080
       tags:
       - {key: http.method, value: GET}
+      - {key: http.status_code, value: '200'}
       - {key: url, value: 'http://localhost:18080/jettyserver-case/case/receiveContext-0'}
       skipAnalysis: 'false'
     - operationName: GET:/jettyclient-case/case/jettyclient-case
@@ -68,4 +70,5 @@ segmentItems:
       tags:
       - {key: url, value: 'http://localhost:8080/jettyclient-case/case/jettyclient-case'}
       - {key: http.method, value: GET}
+      - {key: http.status_code, value: '200'}
       skipAnalysis: 'false'

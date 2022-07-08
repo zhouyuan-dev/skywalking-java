@@ -32,6 +32,7 @@ segmentItems:
       tags:
       - {key: url, value: 'http://localhost:8080/feign-scenario/create/'}
       - {key: http.method, value: POST}
+      - {key: http.status_code, value: '201'}
       refs:
       - {parentEndpoint: GET:/feign-scenario/case/feign-scenario, networkAddress: 'localhost:8080',
         refType: CrossProcess, parentSpanId: 1, parentTraceSegmentId: not null, parentServiceInstance: not
@@ -52,6 +53,7 @@ segmentItems:
       tags:
       - {key: url, value: 'http://localhost:8080/feign-scenario/get/1'}
       - {key: http.method, value: GET}
+      - {key: http.status_code, value: '200'}
       refs:
       - {parentEndpoint: GET:/feign-scenario/case/feign-scenario, networkAddress: 'localhost:8080',
         refType: CrossProcess, parentSpanId: 2, parentTraceSegmentId: not null, parentServiceInstance: not
@@ -72,6 +74,7 @@ segmentItems:
       tags:
       - {key: url, value: 'http://localhost:8080/feign-scenario/update/1'}
       - {key: http.method, value: PUT}
+      - {key: http.status_code, value: '200'}
       refs:
       - {parentEndpoint: GET:/feign-scenario/case/feign-scenario, networkAddress: 'localhost:8080',
         refType: CrossProcess, parentSpanId: 3, parentTraceSegmentId: not null, parentServiceInstance: not
@@ -92,6 +95,7 @@ segmentItems:
         tags:
           - {key: url, value: 'http://localhost:8080/feign-scenario/modify/1'}
           - {key: http.method, value: PUT}
+          - {key: http.status_code, value: '200'}
         refs:
           - {parentEndpoint: GET:/feign-scenario/case/feign-scenario, networkAddress: 'localhost:8080',
              refType: CrossProcess, parentSpanId: 4, parentTraceSegmentId: not null, parentServiceInstance: not
@@ -112,6 +116,7 @@ segmentItems:
       tags:
       - {key: url, value: 'http://localhost:8080/feign-scenario/delete/1'}
       - {key: http.method, value: DELETE}
+      - {key: http.status_code, value: '204'}
       refs:
       - {parentEndpoint: GET:/feign-scenario/case/feign-scenario, networkAddress: 'localhost:8080',
         refType: CrossProcess, parentSpanId: 5, parentTraceSegmentId: not null, parentServiceInstance: not
@@ -131,6 +136,7 @@ segmentItems:
       peer: localhost:8080
       tags:
       - {key: http.method, value: POST}
+      - {key: http.status_code, value: '201'}
       - {key: url, value: 'http://localhost:8080/feign-scenario/create/'}
       - {key: http.body, value: '{"id": "1", "userName": "test"}'}
       skipAnalysis: 'false'
@@ -146,6 +152,7 @@ segmentItems:
       peer: localhost:8080
       tags:
       - {key: http.method, value: GET}
+      - {key: http.status_code, value: '200'}
       - {key: url, value: 'http://localhost:8080/feign-scenario/get/1'}
       skipAnalysis: 'false'
     - operationName: /feign-scenario/update/{id}
@@ -160,6 +167,7 @@ segmentItems:
       peer: localhost:8080
       tags:
       - {key: http.method, value: PUT}
+      - {key: http.status_code, value: '200'}
       - {key: url, value: 'http://localhost:8080/feign-scenario/update/1'}
       - {key: http.body, value: '{"id": "1", "userName": "testA"}'}
       skipAnalysis: 'false'
@@ -175,6 +183,7 @@ segmentItems:
       peer: localhost:8080
       tags:
         - {key: http.method, value: PUT}
+        - {key: http.status_code, value: '200'}
         - {key: url, value: 'http://localhost:8080/feign-scenario/modify/1'}
         - {key: http.body, value: testA}
       skipAnalysis: 'false'
@@ -190,6 +199,7 @@ segmentItems:
       peer: localhost:8080
       tags:
       - {key: http.method, value: DELETE}
+      - {key: http.status_code, value: '204'}
       - {key: url, value: 'http://localhost:8080/feign-scenario/delete/1'}
       skipAnalysis: 'false'
     - operationName: GET:/feign-scenario/case/feign-scenario
@@ -205,4 +215,5 @@ segmentItems:
       tags:
       - {key: url, value: 'http://localhost:8080/feign-scenario/case/feign-scenario'}
       - {key: http.method, value: GET}
+      - {key: http.status_code, value: '200'}
       skipAnalysis: 'false'

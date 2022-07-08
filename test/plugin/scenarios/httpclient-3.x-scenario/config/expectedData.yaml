@@ -32,6 +32,7 @@ segmentItems:
       tags:
       - {key: url, value: 'http://localhost:8080/httpclient-3.x-scenario/case/context-propagate'}
       - {key: http.method, value: GET}
+      - {key: http.status_code, value: '200'}
       - key: http.params
         value: |-
           q1=[v1]
@@ -56,6 +57,7 @@ segmentItems:
       tags:
       - {key: url, value: 'http://localhost:8080/httpclient-3.x-scenario/case/context-propagate?q1=v1&chinese=%e4%b8%ad%e6%96%87'}
       - {key: http.method, value: GET}
+      - {key: http.status_code, value: '200'}
       - {key: http.params, value: q1=v1&chinese=%e4%b8%ad%e6%96%87}
       skipAnalysis: 'false'
     - operationName: GET:/httpclient-3.x-scenario/case/httpclient
@@ -71,6 +73,7 @@ segmentItems:
       tags:
       - {key: url, value: 'http://localhost:8080/httpclient-3.x-scenario/case/httpclient'}
       - {key: http.method, value: GET}
+      - {key: http.status_code, value: '200'}
       - key: http.params
         value: |-
           q1=[v1]
